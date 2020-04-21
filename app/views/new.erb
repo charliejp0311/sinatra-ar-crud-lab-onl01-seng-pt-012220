@@ -1,5 +1,7 @@
-<form method="post" action="/articles">
-  <input type="text" name="title" value=""></input>
-  <input type="text" name="content"></input>
-  <input type="submit" id="submit"></input>
+<form method="post" action="/articles" id="thisForm">
+  <label for="title">Article Title:</label><br>
+  <input type="text" name="title" value=""><br>
+  <label for="content">~ ~ ~ ~ Content ~ ~ ~ ~</label><br>
+  <textarea name="content" form="thisForm"></textarea><br>
+  <input type="submit" id="submit">
 </form>
