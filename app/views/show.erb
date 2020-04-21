@@ -1,6 +1,5 @@
 <h1><%=@article.title%></h1>
 <p><%=@article.content%></p>
 <form id="hidden" method="delete" action="/articles/<%=@articles.id%>">
-  <!-- <input id="hidden" type="hidden" name="_method" value="PATCH"> -->
   <button type="submit" value="delete"></button>
 </form>
