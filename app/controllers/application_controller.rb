@@ -17,8 +17,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/articles' do
-    @new_article = Article.create(params)
-    redirect to "/articles/#{@new_article.id}"
+    @article = Article.create(params)
+    redirect to "/articles/#{@article.id}"
   end
 
   get '/articles/:id' do
@@ -46,7 +46,6 @@ class ApplicationController < Sinatra::Base
 
   delete '/articles/:id' do
     @article = Article.find_by_id(params["id"])
-    @article.delete
-    @article.save
+    Article.remove(@article)
   end
 end
